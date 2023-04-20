@@ -1,9 +1,9 @@
 # Height Estimation of Passenger using Spectrograms of Sonar Signal In TensorFlow CNN
 This is a project for Machine Learning course of Information Technology under Frankfurt University of Applied Sciences supervised by Dr. Prof. Andreas Pech
 # Contributors:
-If you have any query related to this project please contact two of the contributors,
-Shafait Azam (https://github.com/ShafaitAzam): email- shafait.azam@stud.fra-uas.de and 
-Mashnunul Huq (https://github.com/javedcoding): email- mashnunul.huq@stud.fra-uas.de
+If you have any query related to this project please contact two of the Authors,
+Shafait Azam(email- shafait.azam@stud.fra-uas.de) - Data Preprocessing, Data Modelling, Algorithm Deployment, Core Programmer.
+Mashnunul Huq(email- mashnunul.huq@stud.fra-uas.de) - Data Acquisition, Programmer, Automation.
 # Key Words
 Raw Data retrieval from FIUS Red Pitaya Ultrasonic Sensor System, Time Series Data Analysis, Data Preprocessing, Data Modelling, Convolutional Neural Network Deployment, Passenger's Height Estimation
 # Data Repository
