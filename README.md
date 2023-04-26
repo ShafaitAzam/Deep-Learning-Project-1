@@ -15,6 +15,7 @@ Upper sensor: https://drive.google.com/file/d/1Jxn6NIRaSjZDK_I2HiUXpHcbwpzgeb2a/
 # How to Train Machines
 There are two machines for two sensors to detect if there is a person present in the seat or not. So it is problem of binary classification. The main logic behind this project was to train two machines for two of the sensors (upper and lower) to detect if there is a full sized human present covering both upper and lower sensors or there is a small infant covering only the lower sensor or there is no one in the seat (explained in details in the documentation section).
 First download two csv files for data acquired from the ADC signal of SONAR supported Radpitaya system. Then use the portion of data preprocessing to generate spectrograms. Here data file location have to be given as argument while calling "DataPreProcessing" class and by calling "save_Spectogram" method of that class we can save the spectrograms and numpy arrays of those spectograms into two seperated folders. After this step spectograms may look like this:
+
 ![Lower sensor spectrogram example picture](https://user-images.githubusercontent.com/59325753/234520045-3151bfe1-d1aa-4644-9209-117b812f83c7.jpg)
 
 Here spectograms will help Human Eye to understand scenarios of the whole spectograms and numpy arrays of these spectograms are easier for computer to read for the next process. We have taken only the first 512 values of the frequency spectogram to take only significant changes into account of a whole time series signal for reducing computational hazards.
@@ -24,9 +25,11 @@ After doing the data preprocessing only by calling the class CNNMachine one can 
 # Accuracy
 As we have splitted the data set into 85% traning data set and 15% testing dataset, we got a lowest accuracy of 99.8% after several runs in different processors and kaggle. 
 A confusion Matrix for the Upper Sensor is similar to this:
+
 ![Upper sensor confusion matrix](https://user-images.githubusercontent.com/59325753/234520566-049dc48b-f000-477f-a9dc-85d2eb3a32fe.jpg)
 
 And the confusion matrix for the Lower Sensor can be similar to this:
+
 ![Lower sensor confusion matrix](https://user-images.githubusercontent.com/59325753/234520470-f8ebe1f7-5677-4653-92e9-7bebeb34bc7e.jpg)
 
 
