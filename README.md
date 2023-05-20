@@ -11,10 +11,14 @@ Raw Data retrieval from FIUS Red Pitaya Ultrasonic Sensor System, Time Series Da
 
 # Data Acquisition
 As this project's goal is to find the driver's or passenger's height estimation using SONAR system, we used Red Pitaya Ultrasonic device for the data acquisition purpose. RedPitaya Ultrasonic system is a powerful hardware and software platform designed for ultrasonic measurements. At the core of the RedPitaya Ultrasonic system is the RedPitaya board, which is a credit card-sized device that houses the digitizer and field-programmable gate array (FPGA) which has two high-speed analog input channels with sampling rates up to 125 MS/s and a resolution of 14 bits.
+
 ![image](https://github.com/ShafaitAzam/Deep-Learning-Project-1/assets/59325753/f236aa41-4d69-4b4d-9a7a-1193ad0dfe7b)
+
 Fig: Red Pitaya Ultrasonic System used in the project.
 In the Image below car set up for height estimation is showed. On the dashboard two Red Pitaya ultrasonic sensors werw placed focusing on upper part and lower part of the seat. We used a card board box to measure the inteference of the card board to find out how much area is covered by each of the sensors. Then mathematically calculated the coverage cones, sensor board's angle to the horizontal line and coverage area of the sensors. Then we acquired ADC signal data through the embeded software working with Red Pitaya.
+
 ![image](https://github.com/ShafaitAzam/Deep-Learning-Project-1/assets/59325753/6ea024c0-6010-48fe-ae9c-2e1756d41037)
+
 Fig: Calculation Procedure of 2 Sensors' Coverage Range
 
 # Data Repository
@@ -32,6 +36,7 @@ Here spectograms will help Human Eye to understand scenarios of the whole specto
 
 
 After doing the data preprocessing only by calling the class CNNMachine one can easily make the CNN machines with predefined parameters for 50k data for a project without changing any internal parameters. While initiating this class one must give the true csv file and the spectogram folder's path. after training by only calling the "predict" method one can easily get the result of prediction from a new data set if there is a person present before the sensor or not.
+
 | Layer(Type)       | Output Shape |
 |------------------------|----------------------|
 | conv2d_1 (Conv2d)      | (None, 254, 254, 32) |
@@ -47,6 +52,7 @@ After doing the data preprocessing only by calling the class CNNMachine one can 
 | dense_1                | (None, 64)           |
 | dropout_2              | (None, 64)           |
 | dense_2                | (None, 1)            |
+
 Tab: Convolutional Neural Network Composition
 
 # Result & Accuracy
@@ -54,16 +60,19 @@ As we have splitted the data set into 85% traning data set and 15% testing datas
 A confusion Matrix for the Upper Sensor is similar to this:
 
 ![Upper sensor confusion matrix](https://user-images.githubusercontent.com/59325753/234520566-049dc48b-f000-477f-a9dc-85d2eb3a32fe.jpg)
+
 Fig: Confusion Maxtrix of Test Data in CNN Machine1 for Upper Sensor
 
 And the confusion matrix for the Lower Sensor can be similar to this:
 
 ![Lower sensor confusion matrix](https://user-images.githubusercontent.com/59325753/234520470-f8ebe1f7-5677-4653-92e9-7bebeb34bc7e.jpg)
+
 Fig: Confusion Maxtrix of Test Data in CNN Machine2 for Lower Sensor
 
 We have tested only 500 combined data, captured while both sensors were active. Among them 250 data was for regular sized human, 200 was for infant or very small and 50 was for no person. In the table I, we can see that 248 out of 250 regular sized humans were detected correctly. So, accuracy in this case 99.2%. In case of infant/very small person, 195 out of 200 were detected correctly by lower sensor and upper sensor detected nothing (means label 0). So, the accuracy is 97.5%. And in the case of no person, 45 out of 50 have been detected correctly.
 
 ![image](https://github.com/ShafaitAzam/Deep-Learning-Project-1/assets/59325753/f49f7b57-c2fd-4ea5-b6eb-776d8353d4ee)
+
 Tab: Height Estimation Result
 
 # Usage of The Project 
