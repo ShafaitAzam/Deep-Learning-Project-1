@@ -1,5 +1,5 @@
 # Height Estimation of Passenger using Spectrograms of Sonar Signal In TensorFlow CNN
-This is a project for Machine Learning course of Information Technology under Frankfurt University of Applied Sciences supervised by Dr. Prof. Andreas Pech
+This is a project for Machine Learning(Time Series Signal Analysis) supervised by Prof. Dr. Andreas Pech
 # Contributors:
 If you have any query related to this project please contact two of the Authors:
 
